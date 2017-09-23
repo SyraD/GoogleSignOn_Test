@@ -1,6 +1,6 @@
 <h1> Google Sign On Button Testing </h1>
 
-<form action="/action_page.php">
+<form id="login">
       <label><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -8,6 +8,12 @@
       <input type="password" placeholder="Enter Password" name="pswd" required>
         
       <button type="submit">Login</button>
-      <input type="checkbox" checked="checked"> Remember me
+
  </form>
+
+<script>
+sessionStorage.uname = JSON.stringify(document.forms["login"]["uname"].value);
+sessionStorage.pswd = JSON.stringify(document.forms["login"]["pswd"].value)
+      
+</script>
  
