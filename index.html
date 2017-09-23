@@ -1,5 +1,9 @@
 <h1> Google Sign On Button Testing </h1>
 
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="714276590293-8u89bo63dlqtlrsi6jht2chgmcgp88gd.apps.googleusercontent.com" content="714276590293-8u89bo63dlqtlrsi6jht2chgmcgp88gd.apps.googleusercontent.com.apps.googleusercontent.com">
+
+
 <script>    
 function storeValues() {
       var uname = document.forms["login"]["uname"].value;
@@ -8,6 +12,14 @@ function storeValues() {
       sessionStorage.setItem('username', uname);
       sessionStorage.setItem('password', pswd);
 }      
+      
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
 </script>
 
 <form id="login">
@@ -17,7 +29,7 @@ function storeValues() {
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pswd" required>
         
-      <button onClick="storeValues()">Login</button>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
  </form>
 
