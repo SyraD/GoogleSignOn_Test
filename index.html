@@ -7,16 +7,19 @@
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pswd" required>
         
-      <button type="submit">Login</button>
+      <button onClick="storeValues()">Login</button>
 
  </form>
 
 <script>
+      
+var storeValues() {
 var uname = document.forms["login"]["uname"].value;
 var pswd = document.forms["login"]["pswd"].value;
       
 sessionStorage.setItem('username', uname);
 sessionStorage.setItem('password', pswd);
+}
 
       
 </script>
