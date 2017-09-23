@@ -12,8 +12,12 @@
  </form>
 
 <script>
-sessionStorage.uname = document.forms["login"]["uname"].value;
-sessionStorage.pswd = document.forms["login"]["pswd"].value;
+var uname = document.forms["login"]["uname"].value;
+var pswd = document.forms["login"]["pswd"].value;
+      
+sessionStorage.setItem('username', uname);
+sessionStorage.setItem('password', pswd);
+
       
 </script>
  
