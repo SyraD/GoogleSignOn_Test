@@ -1,5 +1,15 @@
 <h1> Google Sign On Button Testing </h1>
 
+<script>    
+var storeValues() {
+var uname = document.forms["login"]["uname"].value;
+var pswd = document.forms["login"]["pswd"].value;
+      
+sessionStorage.setItem('username', uname);
+sessionStorage.setItem('password', pswd);
+}      
+</script>
+
 <form id="login">
       <label><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
@@ -11,16 +21,5 @@
 
  </form>
 
-<script>
-      
-var storeValues() {
-var uname = document.forms["login"]["uname"].value;
-var pswd = document.forms["login"]["pswd"].value;
-      
-sessionStorage.setItem('username', uname);
-sessionStorage.setItem('password', pswd);
-}
 
-      
-</script>
  
