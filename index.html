@@ -1,29 +1,29 @@
 <html>
+  <!--https://console.developers.google.com/apis/credentials-->
 <head>
   <meta name="google-signin-clientid" content="714276590293-8u89bo63dlqtlrsi6jht2chgmcgp88gd">
 </head>
 <body>
   
+  <!--https://developers.google.com/identity/sign-in/web/quick-migration-guide-->
 <div class="g-signin2"
-  data-scope="https://www.googleapis.com/auth/userinfo.email"
+  data-scope="https://www.googleapis.com/auth/userinfo.email" <!-- https://developers.google.com/identity/protocols/OAuth2-->
   data-clientid="714276590293-8u89bo63dlqtlrsi6jht2chgmcgp88gd"
   data-onsuccess="onSignIn"
   data-onfailure="onSignInFailure">
 </div>
   
   <script>
+  // https://developers.google.com/identity/sign-in/web/quick-migration-guide   
 auth2 = gapi.auth2.init();
 auth2.attachClickHandler('signinButton', onSignIn, onSignInFailure);
     
     
- // Google Sign-in (new)
+ // Google Sign-in (new) https://developers.google.com/identity/sign-in/web/quick-migration-guide
 function onSignIn(googleUser) {
   window.location = "https://syrad.github.io/GoogleSignOn_Test/success";
+}
 
-}
-function onSignInFailure() {
-  // Handle sign-in errors
-}
   </script>
   
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
