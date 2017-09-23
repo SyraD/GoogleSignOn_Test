@@ -1,36 +1,8 @@
-<h1> Google Sign On Button Testing </h1>
-
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="714276590293-8u89bo63dlqtlrsi6jht2chgmcgp88gd.apps.googleusercontent.com" content="714276590293-8u89bo63dlqtlrsi6jht2chgmcgp88gd.apps.googleusercontent.com.apps.googleusercontent.com">
-
-
-<script>    
-function storeValues() {
-      var uname = document.forms["login"]["uname"].value;
-      var pswd = document.forms["login"]["pswd"].value;
-      
-      sessionStorage.setItem('username', uname);
-      sessionStorage.setItem('password', pswd);
-}      
-      
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-</script>
-
-<form id="login">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pswd" required>
-
- </form>
-
+<html>
+<head>
+  <meta name="714276590293-8u89bo63dlqtlrsi6jht2chgmcgp88gd.apps.googleusercontent.com" content="714276590293-8u89bo63dlqtlrsi6jht2chgmcgp88gd.apps.googleusercontent.com.apps.googleusercontent.com">
+</head>
+<body>
   <div id="my-signin2"></div>
   <script>
     function onSuccess(googleUser) {
@@ -53,7 +25,5 @@ function onSignIn(googleUser) {
   </script>
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-
-
-
- 
+</body>
+</html>
