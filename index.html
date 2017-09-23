@@ -11,7 +11,9 @@
   
   <script>
     function onSuccess(googleUser) {
+      window.location = "https://syrad.github.io/GoogleSignOn_Test/success";
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+
     }
     function onFailure(error) {
       console.log(error);
@@ -28,6 +30,9 @@
       });
     }
   </script>
+  
+
+}
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
